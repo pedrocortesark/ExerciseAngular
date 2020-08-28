@@ -1,8 +1,4 @@
-﻿
-
-using ExerciseAngular.Models.Identity;
-
-namespace ExerciseAngular.Controllers
+﻿namespace ExerciseAngular.Controllers
 {
     using Microsoft.IdentityModel.Tokens;
     using System;
@@ -14,6 +10,7 @@ namespace ExerciseAngular.Controllers
     using Microsoft.AspNetCore.Mvc;
     using System.Threading.Tasks;
     using Microsoft.Extensions.Options;
+    using Models.Identity;
 
 
     public class IdentityController: ApiController
