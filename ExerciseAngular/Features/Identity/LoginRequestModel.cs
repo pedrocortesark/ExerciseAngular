@@ -1,5 +1,5 @@
 ﻿
-namespace ExerciseAngular.Models.Identity
+namespace ExerciseAngular.Features.Identity
 {
     using System.ComponentModel.DataAnnotations;
 

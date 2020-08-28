@@ -1,5 +1,5 @@
 ﻿
-namespace ExerciseAngular.Controllers
+namespace ExerciseAngular.Features
 {
     using Microsoft.AspNetCore.Mvc;
 
