@@ -1,18 +1,11 @@
-﻿
-
-
-
+﻿using System.Collections.Generic;
 
 namespace ExerciseAngular.Features.Cats
 {
-
-    using Data;
-    using Data.Models;
     using Infraestructure;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
     using System.Threading.Tasks;
-
 
     public class CatsController : ApiController
     {
@@ -23,15 +16,24 @@ namespace ExerciseAngular.Features.Cats
             this._catService = catService;
         }
 
-
-        [HttpPost]
         [Authorize]
-        public async Task<ActionResult<int>> Create(CreateCatsRequestModel model)
+        [HttpGet]
+        public async Task<IEnumerable<CatListingResponseModel>> Mine()
         {
             var userId = this.User.GetId();
-            var id = this._catService.Create(model.ImageUrl, model.Description, userId);
-            
 
+            return await this._catService.ByUser(userId);
+
+        }
+        
+        [Authorize]
+        [HttpPost]
+        public async Task<ActionResult> Create(CreateCatsRequestModel model)
+        {
+            var userId = this.User.GetId();
+
+            var id = await this._catService.Create(model.ImageUrl, model.Description, userId);
+            
             return Created(nameof(this.Create), id);
         }
     }
