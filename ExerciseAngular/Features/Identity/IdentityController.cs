@@ -1,10 +1,13 @@
-﻿namespace ExerciseAngular.Features.Identity
+﻿
+
+namespace ExerciseAngular.Features.Identity
 {
     using Data.Models;
     using Microsoft.AspNetCore.Identity;
     using Microsoft.AspNetCore.Mvc;
     using System.Threading.Tasks;
     using Microsoft.Extensions.Options;
+    using ExerciseAngular.Features.Identity.Models;
 
 
     public class IdentityController: ApiController

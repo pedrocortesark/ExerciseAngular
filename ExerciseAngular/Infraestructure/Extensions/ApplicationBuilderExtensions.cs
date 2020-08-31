@@ -1,6 +1,6 @@
 ﻿
 
-namespace ExerciseAngular.Infraestructure
+namespace ExerciseAngular.Infraestructure.Extensions
 {
     using Data;
     using Microsoft.AspNetCore.Builder;

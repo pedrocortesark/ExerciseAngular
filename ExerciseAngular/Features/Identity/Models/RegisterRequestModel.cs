@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace ExerciseAngular.Features.Identity
+namespace ExerciseAngular.Features.Identity.Models
 {
     public class RegisterRequestModel
     {

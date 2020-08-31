@@ -1,21 +1,19 @@
 ﻿
-
-
-using ExerciseAngular.Features.Cats;
-using ExerciseAngular.Features.Identity;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.OpenApi.Models;
-
-namespace ExerciseAngular.Infraestructure
+namespace ExerciseAngular.Infraestructure.Extensions
 {
-    using Microsoft.Extensions.DependencyInjection;
     using Data;
     using ExerciseAngular.Data.Models;
-    using Microsoft.AspNetCore.Identity;
+    using ExerciseAngular.Features.Cats;
+    using ExerciseAngular.Features.Identity;
+    using ExerciseAngular.Infraestructure.Filters;
     using Microsoft.AspNetCore.Authentication.JwtBearer;
-    using System.Text;
+    using Microsoft.AspNetCore.Identity;
+    using Microsoft.EntityFrameworkCore;
     using Microsoft.Extensions.Configuration;
+    using Microsoft.Extensions.DependencyInjection;
     using Microsoft.IdentityModel.Tokens;
+    using Microsoft.OpenApi.Models;
+    using System.Text;
 
     public static class ServiceCollectionExtensions
     {
@@ -98,6 +96,16 @@ namespace ExerciseAngular.Infraestructure
                     Version = "v1"
                 });
             });
+
+            return services;
+        }
+
+        public static IServiceCollection AddApiControllers(this IServiceCollection services)
+        {
+            services
+                .AddControllers(options => options
+                    .Filters
+                    .Add<ModelOrNotFoundActionFilter>());
 
             return services;
         }

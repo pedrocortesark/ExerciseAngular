@@ -2,7 +2,7 @@
 
 
 
-namespace ExerciseAngular.Infraestructure
+namespace ExerciseAngular.Infraestructure.Extensions
 {
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;

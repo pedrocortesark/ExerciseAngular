@@ -2,7 +2,7 @@
 
 using ExerciseAngular.Data;
 
-namespace ExerciseAngular.Features.Cats
+namespace ExerciseAngular.Features.Cats.Models
 {
     using System.ComponentModel.DataAnnotations;
     using static Validation.Cat;

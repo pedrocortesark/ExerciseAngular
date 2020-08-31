@@ -1,7 +1,7 @@
 ﻿
-namespace ExerciseAngular.Features.Cats
+namespace ExerciseAngular.Features.Cats.Models
 {
-    public class CatListingResponseModel
+    public class CatListingServiceModel
     {
         public int Id { get; set; }
 

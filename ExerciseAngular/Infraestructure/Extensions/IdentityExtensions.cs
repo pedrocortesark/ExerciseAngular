@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using System.Security.Claims;
 
-namespace ExerciseAngular.Infraestructure
+namespace ExerciseAngular.Infraestructure.Extensions
 {
     public static class IdentityExtensions
     {
