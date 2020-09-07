@@ -8,15 +8,26 @@
   <ItemGroup>
     <Compile Remove="Data\Migrations\20200827164413_CatsTable.cs" />
     <Compile Remove="Data\Migrations\20200827164413_CatsTable.Designer.cs" />
+    <Compile Remove="Data\Migrations\20200903184803_AuditInformation.cs" />
+    <Compile Remove="Data\Migrations\20200903184803_AuditInformation.Designer.cs" />
+    <Compile Remove="Data\Migrations\20200904173731_AuditInfoCreatedByNotrequired.cs" />
+    <Compile Remove="Data\Migrations\20200904173731_AuditInfoCreatedByNotrequired.Designer.cs" />
+    <Compile Remove="Data\Migrations\20200904174230_AuditInfoCreatedByNotrequired2.cs" />
+    <Compile Remove="Data\Migrations\20200904174230_AuditInfoCreatedByNotrequired2.Designer.cs" />
+    <Compile Remove="Data\Migrations\20200904174842_AuditInformation.cs" />
+    <Compile Remove="Data\Migrations\20200904174842_AuditInformation.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.7" />
-    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.6" />
-    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.6" />
-    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.6" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.6" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.6" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.7">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.5.1" />
   </ItemGroup>
 

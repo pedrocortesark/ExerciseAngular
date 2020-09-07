@@ -36,6 +36,7 @@ namespace ExerciseAngular.Features.Cats
            
             =>  await this._context.Cats
                 .Where(c => c.UserId == userId)
+                .OrderByDescending(c=>c.CreatedOn)
                 .Select(c => new CatListingServiceModel
                 {
                     Id = c.Id,

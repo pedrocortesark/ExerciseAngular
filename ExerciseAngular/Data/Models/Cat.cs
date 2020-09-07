@@ -1,13 +1,10 @@
-﻿
-
-
-
-namespace ExerciseAngular.Data.Models
+﻿namespace ExerciseAngular.Data.Models
 {
+    using ExerciseAngular.Data.Models.Base;
     using System.ComponentModel.DataAnnotations;
     using static Validation.Cat;
 
-    public class Cat
+    public class Cat: DeleteableEntity
     {
         public int Id { get; set; }
         [Required]

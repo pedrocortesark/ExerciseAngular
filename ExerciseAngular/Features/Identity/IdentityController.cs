@@ -14,14 +14,14 @@ namespace ExerciseAngular.Features.Identity
     {
         private readonly UserManager<User> _userManager;
         private readonly AppSettings _appSettings;
-        private readonly IIdentityService _identityService;
+        private readonly IIdentityService _identity;
         
 
-        public IdentityController(UserManager<User> userManager, IIdentityService identityService, IOptions<AppSettings> appSettings)
+        public IdentityController(UserManager<User> userManager, IIdentityService identity, IOptions<AppSettings> appSettings)
         {
             this._userManager = userManager;
             this._appSettings = appSettings.Value;
-            this._identityService = identityService;
+            this._identity = identity;
         }
 
         [HttpPost]
@@ -54,7 +54,7 @@ namespace ExerciseAngular.Features.Identity
 
             if (!passwordValid) return Unauthorized();
 
-            var encryptedToken = this._identityService.GenerateJwtToken(user.Id, user.UserName, this._appSettings.Secret);
+            var encryptedToken = this._identity.GenerateJwtToken(user.Id, user.UserName, this._appSettings.Secret);
 
             return new LoginResponseModel
             {

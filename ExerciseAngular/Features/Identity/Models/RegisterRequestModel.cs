@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿
 
 namespace ExerciseAngular.Features.Identity.Models
 {
+    using System.ComponentModel.DataAnnotations;
+
     public class RegisterRequestModel
     {
         [Required]

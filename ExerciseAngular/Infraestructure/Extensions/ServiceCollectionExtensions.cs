@@ -1,4 +1,6 @@
 ﻿
+using ExerciseAngular.Infraestructure.Service;
+
 namespace ExerciseAngular.Infraestructure.Extensions
 {
     using Data;
@@ -80,6 +82,7 @@ namespace ExerciseAngular.Infraestructure.Extensions
         {
             services
                 .AddTransient<IIdentityService, IdentityService>()
+                .AddScoped<ICurrentUserService, CurrentUserService>()
                 .AddTransient<ICatService, CatService>();
 
             return services;
